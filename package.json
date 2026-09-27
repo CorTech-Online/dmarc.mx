@@ -14,22 +14,29 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^2.5.2",
-    "@cloudflare/vitest-pool-workers": "^0.16.19",
-    "@cloudflare/workers-types": "^4.20260611.1",
+    "@cloudflare/vitest-pool-workers": "^0.22.0",
+    "@cloudflare/workers-types": "^5.20260925.1",
     "@emnapi/core": "^1.11.1",
     "@emnapi/runtime": "^1.11.1",
     "@types/node": "^26.1.0",
-    "@vitest/coverage-v8": "^4.1.10",
+    "@vitest/coverage-v8": "^4.1.11",
     "minimatch": "^10.2.5",
-    "sharp": "^0.35.3",
+    "sharp": "^0.35.4",
     "tsx": "^4.22.4",
     "typescript": "^6.0.3",
-    "vitest": "^4.1.9",
-    "wrangler": "^4.106.0"
+    "vitest": "^4.1.11",
+    "wrangler": "^4.124.0"
   },
   "dependencies": {
-    "@sentry/cloudflare": "^10.63.0",
-    "hono": "^4.12.25",
+    "@sentry/cloudflare": "^10.75.3",
+    "hono": "^4.13.5",
     "jose": "^6.2.3"
+  },
+  "overrides": {
+    "@cloudflare/vitest-pool-workers": {
+      "miniflare": {
+        "sharp": "$sharp"
+      }
+    }
   }
 }
